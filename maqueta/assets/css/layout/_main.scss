@@ -1,0 +1,88 @@
+/* ==|====================
+   Layout/Main
+   ======================= */
+
+main {
+  width: 100%; height: auto; position: relative; padding: 0; margin: 0; z-index: 3;
+  &.PageContainer {
+    min-height: 100vh; @include display(flex); @include flex-direction(column); @include flex-wrap(wrap);
+  }
+}
+article {
+  width: 100%; height: auto; padding: 0; margin: 0; position: relative;
+}
+.descGen {
+  width: 100%; height: auto; padding: 0; margin: 0 0 20px 0; position: relative;
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center; margin-bottom: 10px; color: $black;
+  }
+  p { text-align: center; margin: 0 0 0 0; }
+}
+
+// Sections
+.hero-sec {
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 0 0; margin: 0 0 0 0;
+  .contHero {
+    width: 100%; height: auto; padding: 0; margin: 0; position: relative;
+    img {
+      display: block; width: 100%; height: auto; padding: 0; margin: 0;
+    }
+  }
+  .header-title {
+    width: 100%; height: 100%; @include position(absolute, 0 0 null null); z-index: 2; background-color: $col1; @include transition(all 0.25s);
+  }
+  .scrollNext {
+    width: 50px; height: 50px; display: block; margin: 0; padding: 0; @include position(absolute, null null 20px 50%); @include transform(translateX(-50%)); z-index: 6; line-height: 50px; text-align: center; color: $col3; font-size: rem(40px);
+    &:hover {
+      color: $col1;
+    }
+  }
+}
+.toolsHero {
+  width: auto; height: auto; padding: 0; margin: 0; @include position(fixed, 50% 0 null null); @include transform(translateY(-50%)); z-index: 100;
+  ul {
+    list-style-type: none; @include displayFlex(flex, column, flex-start, flex-start, wrap); padding: 0; margin: 0;
+    li {
+      list-style-type: none; padding: 0 0 0 0; margin: 0 0 20px 0;
+      a {
+        display: block; width: 40px; height: 40px; color: $white; font-size: rem(20px); margin: 0; padding: 0; text-align: center; line-height: 40px; background-color: $col11;
+        &:hover {
+          // color: $col1; background-color: $col3;
+        }
+      }
+    }
+  }
+}
+
+// Utilidades
+.bannerInt {
+  width: 100%; height: 300px; @include position(relative, null null null null); padding: 0 0; margin: 0 0 0 0;
+  img {
+    display: block; width: 100%; height: 100%; padding: 0; margin: 0; object-fit: cover; font-family: "object-fit: cover";
+  }
+  .titleInt {
+    width: 100%; height: auto; padding: 0 0; margin: 0 0; @include position(absolute, 50% null null 0); @include transform(translateY(-50%)); z-index: 1;
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0 0 10px 0; padding: 0; text-align: center; color: $white; text-transform: uppercase;
+    }
+    p {
+      text-align: center; margin: 0; padding: 0; color: $white; font-size: rem(13px);
+    }
+    .logoInt {
+      display: block; width: 100%; max-width: 250px; height: auto; margin: 0 auto 0 auto; padding: 0 0;
+    }
+  }
+  .btnBannerInt {
+    width: 100%; height: auto; padding: 0; margin: 10px 0 0 0; position: relative; text-align: center;
+    a {
+      height: 40px; margin: 0 0 0 0; color: $white; line-height: 40px; font-size: rem(12px);
+      &:link, &:visited {
+        top:0; left:0; padding:0 45px; border-radius: 22px;
+      }
+    }
+  }
+}
+
+.elementsCont {
+  width: 100%; height: auto; padding: 50px 0; margin: 0;
+}
