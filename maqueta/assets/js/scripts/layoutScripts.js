@@ -7,7 +7,7 @@ function menuMobile() {
   $menuMobile.appendTo($body);
   $menuInner = $menuMobile.children('.inner');
   $menuMobile._locked = false;
-  $menuMobile.append('<a class="close" href="#menu">Close</a>');
+  // $menuMobile.append('<a class="close" href="#menu">Close</a>');
 
   $menuMobile._lock = function () {
     if ($menuMobile._locked)
@@ -185,13 +185,13 @@ jQuery(document).ready(function($){
   //BackToTop
   var btn = $('#button');
 
-  $(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-      btn.addClass('show');
-    } else {
-      btn.removeClass('show');
-    }
-  });
+  // $(window).scroll(function() {
+  //   if ($(window).scrollTop() > 300) {
+  //     btn.addClass('show');
+  //   } else {
+  //     btn.removeClass('show');
+  //   }
+  // });
 
   btn.on('click', function(e) {
     e.preventDefault();

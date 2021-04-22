@@ -23,20 +23,43 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi laudantium recusandae consequuntur fugiat est, aliquam nemo aperiam possimus laboriosam <strong>facere alias enim</strong>. Eum nostrum <a href="">voluptate laudantium</a> similique, distinctio possimus ipsum?</p>
                       </div>
                       <div class="col-12">
+                        <div class="titleGen full">
+                          <h2 class="titleGen__head titleGen__head--center">Soluciones</h2>
+                        </div>
+                        <div class="titleGen small">
+                          <h2 class="titleGen__head titleGen__head--left">Soluciones</h3>
+                        </div>
+                      </div>
+                      <div class="col-12">
                         <form action="">
                           <div class="form-row">
-                            <did class="col-12">
+                            <div class="col-12">
                               <div class="animatedField form-group">
                                 <input name="login" type="text" class="form-control" id="userSigninLogin" required />
                                 <label for="userSigninLogin">Correo electrónico</label>
                               </div>
-                            </did>
+                            </div>
+                            <div class="col-12">
+                              <div class="animatedTextArea form-group">
+                                <textarea name="mensajeText" id="mensajeText" cols="30" rows="5" required></textarea>
+                                <label for="mensajeText">Mensaje</label>
+                              </div>
+                            </div>
                           </div>
                         </form>
                       </div>
 
                     </div>
                   </div>
+                  <div class="gridServicios">
+                    <div class="gridServicios__listado">
+
+                      <div class="gridServicios__colsList">
+                        listado
+                      </div>
+
+                    </div><!-- edn.gridServicios__listado --> 
+                  </div><!-- end.gridServicios --> 
                 </section>
 
               </article><!-- end.article inicio --> 

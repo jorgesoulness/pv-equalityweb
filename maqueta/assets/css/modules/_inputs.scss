@@ -17,26 +17,48 @@
       position: relative;
     }
     & .animatedField {
-      position: relative; width: 100%; height: 44px; line-height: 44px;
+      position: relative; width: 100%; height: 52px; line-height: 52px;
       & label {
-        @include position(absolute, 0 null null 0); width: 100%; color: #d3d3d3; cursor: text; @include transition(0.2s all); margin: 0; padding: 0;
+        @include position(absolute, 0 null null 0); width: 100%; color: $col8; cursor: text; @include transition(0.2s all); margin: 0; padding: 0 0 0 17px; text-transform: uppercase; @include box-sizing(border-box);
       }
      & input[type="text"],
      & input[type="email"],
      & input[type="password"] {
-        width: 100%; border: 0; outline: 0; padding: 12px 0 7px; border-bottom: 1px solid $black; box-shadow: none; background-color: $white!important; border-radius: 0!important; @include fluid-type(13px, 15px, 320px, 1200px);
+        width: 100%; border: 0; outline: 0; padding: 17px 17px 10px; border: 0.5px solid $col8; box-shadow: none; background-color: $white!important; border-radius: 0!important; @include fluid-type(13px, 16px, 320px, 1200px);
         &:invalid {
           outline: 0;
         }
         &:focus,
         &:valid,
         &.error-line {
-          border-color: $col1;
+          border-color: $col1; background-color: $col4;
         }
         &:focus ~ label,
         &:valid ~ label,
         &.error-line ~ label {
-          font-size: rem(11px); top: -18px; color: $col1;
+          font-size: rem(11px); top: -16px; color: $col1; padding: 0 0 0 8px;
+        }
+      }
+    }
+    & .animatedTextArea {
+      position: relative; width: 100%; height: auto;
+      & label {
+        @include position(absolute, 15px null null 0); width: 100%; color: $col8; cursor: text; @include transition(0.2s all); margin: 0; padding: 0 0 0 17px; height: calc(100% + 1px); @include box-sizing(border-box); text-transform: uppercase;
+      }
+      textarea {
+        width: 100%; border: 0; outline: 0; padding: 17px 17px 10px; height: auto; border: 0.5px solid $col8; box-shadow: none; background-color: $white!important; border-radius: 0!important; @include fluid-type(13px, 16px, 320px, 1200px); margin-bottom: 0; @include box-sizing(border-box);
+        &:invalid {
+          outline: 0;
+        }
+        &:focus,
+        &:valid,
+        &.error-line {
+          border-color: $col1; background-color: $col4;
+        }
+        &:focus ~ label,
+        &:valid ~ label,
+        &.error-line ~ label {
+          font-size: rem(11px); top: 2px; color: $col1; padding: 0 0 0 8px;
         }
       }
     }

@@ -17,4 +17,8 @@
                   <div class="header-title" style="opacity: 0.0"></div>
                 </section>
 
+                <section></section>
+                
+                <section></section>
+
               </article><!-- end.article inicio --> 

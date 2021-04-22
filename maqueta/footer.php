@@ -7,18 +7,39 @@
           <div class="container">
             <div class="row">
               <div class="col-12">
-                <div class="g-footer__desc g-footer__desc--up">
+                <div class="g-footer__desc g-footer__desc--up text-center">
                   <!-- Back to top button -->
-                  <a id="button"></a>
+                  <a id="button" class="btnFx btnFx__generic btnFx__generic--orange"><span>Regresar</span></a>
+                  <div class="menuGenFooter">
+                    <ul class="menu_footer">
+                      <li><a href="">Inicio</a></li>
+                      <li><a href="">Equality</a></li>
+                      <li><a href="">Soluciones</a></li>
+                      <li><a href="">Contacto</a></li>
+                    </ul>
+                  </div><!-- end.menuGenFooter --> 
                 </div><!-- end.footer__desc--up -->
-              </div>
+              </div><!-- end.col-* -->
+            </div><!-- end.row -->
+          </div><!-- end.container -->
+          <hr>
+          <div class="container">
+            <div class="row">
               <div class="col-12">
                 <div class="g-footer__desc g-footer__desc--down">
-
+                  <div class="copyFooter">
+                    <p>Todos los Derechos Reservados | &copy; Equality <?php echo date('Y'); ?> | <a href="#">Aviso de Privacidad</a></p>
+                  </div>
+                  <div class="menuGenFooter">
+                    <ul class="socFoo">
+                      <li><a class="tyi-facebook" href="#" target="_blank"></a></li>
+                      <li><a class="tyi-linkedin" href="#" target="_blank"></a></li>
+                    </ul>
+                  </div><!-- end.menuGenFooter --> 
                 </div><!-- end.footer__desc--up -->
-              </div>
-            </div>
-          </div>
+              </div><!-- end.col-* --> 
+            </div><!-- end.row -->
+          </div><!-- end.container -->
         </footer><!-- end.Footer -->
         
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/nprogress.js"></script>
@@ -39,7 +60,8 @@
           // $('.version').text(NProgress.version);
           NProgress.start();
           setTimeout(function() {
-            NProgress.done(); $('.fadeX').addClass('out');
+            NProgress.done();
+            $('.fadeX').addClass('out');
           }, 1000);
 
           <?php if($_GET['sec'] == ''): ?>

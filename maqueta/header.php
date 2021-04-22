@@ -44,7 +44,7 @@ require_once('functions.php');
     
       <!-- Header -->
 				<header id="headerGeneral" class="g-header" data-blur-content>
-					<a href="index.html" class="brand">
+					<a href="<?php echo site_url(''); ?>" class="brand">
             <img src="<?php echo get_template_directory_uri(''); ?>assets/img/logos/queality_logo.svg" alt="Equality Company">
             <h1 class="site-title">Equality Company</h1>
           </a>
@@ -81,6 +81,7 @@ require_once('functions.php');
               <li><a href="#" class="button primary fit">Contacto</a></li>
             </ul>
           </div>
+          <a class="close" href="#menu">Close</a>
 				</nav>
 
       <!-- Main -->
