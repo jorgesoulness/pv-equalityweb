@@ -15,9 +15,9 @@ require_once('functions.php');
 	      <link rel="alternate" hreflang="es-mx" href="">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
-        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(''); ?>favicon.ico">
-		    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(''); ?>favicon.ico">
-		    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(''); ?>favicon.ico">
+        <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(''); ?>favicon.ico.png">
+		    <link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(''); ?>favicon.ico.png">
+		    <link rel="shortcut icon" type="image/x-icon" href="<?php echo get_template_directory_uri(''); ?>favicon.ico.png">
 
         <!-- S T Y L E S - G E N E R A L -->
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(''); ?>assets/vendor/bootstrap/dist/css/bootstrap.min.css">
