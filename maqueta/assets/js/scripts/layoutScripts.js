@@ -143,12 +143,95 @@ function headScrolDown() {
   });
 }
 
+// -> Images Sizes for bgs
+function backGroundImages () {
+  var lg = 1200;
+  var md = 1024;
+  var sm = 768;
+  var xs = 640;
+
+  var switch_background = function () {
+    var breakpoints = { lg: 1200, md: 1024, sm: 768, xs: 640 };
+
+    var size = 'hdesktop';
+    var width = $(window).width();
+
+    if (width <= breakpoints.xs) {
+      size = 'mobile';
+      console.log('entraste a 640');
+    } else if (width <= breakpoints.sm) {
+      size = 'tablet';
+      console.log('entraste a 768');
+    } else if (width <= breakpoints.md) {
+      size = 'desktop';
+      console.log('entraste a 1024');
+    } else if (width <= breakpoints.lg) {
+      size = 'hdesktop';
+      console.log('entraste a 1200');
+    }
+
+    $("[data-bg-func]").css('background-image', function () {
+      var bg = ('url(' + $(this).data('bg-'+size) + ')');
+      return bg;
+    });
+  }
+
+  $(window).resize(function () {
+    switch_background();
+  });
+
+  if ($(window).width() <= xs) {
+    switch_background()
+  }
+
+  if ($(window).width() > xs && $(window).width() <= md) {
+    switch_background()
+  }
+}
+
+// Slider Servicios Personalizado
+function slickCustomNav(slickSlideShow, slideCustomNav) {
+  slickSlideShow = $(slickSlideShow);
+  slideCustomNav = $(slideCustomNav);
+
+  slideCustomNav.click(function (e) {
+    e.preventDefault();
+    slideIndex = $(this).attr('data-numbre-box');
+    var sliderServ = $(slickSlideShow);
+    sliderServ[0].slick.slickGoTo(parseInt(slideIndex));
+  });
+
+  slickSlideShow.on('setPosition', function () {
+    var currentSlide = slickSlideShow.slick('slickCurrentSlide');
+    slideCustomNav.removeClass("slick-current");
+    slideCustomNav.filter(function (index) {
+      return index === currentSlide;
+    }).addClass("slick-current");
+  });
+}
+
+$.fn.isInViewport = function () {
+  var elementTop = $(this).offset().top - 100;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height() - parseFloat($("footer").css("height"));
+
+  return elementTop < viewportBottom;
+};
+
 // Load window
 $(window).on('load', function(){
   scrolMenu();
   headScrolDown();
   WowData();
   menuMobile();
+  backGroundImages();
+  if ($("[data-last]").isInViewport()) {
+    $("footer").show();
+  } else {
+    $("footer").hide();
+  }
 });
 
 // DOM ready
@@ -160,6 +243,7 @@ jQuery(document).ready(function($){
   abreModalID();
   closeModalID();
   altoHead();
+  backGroundImages();
 
   $(window).scroll(function(event) {
     var scroll = $(this).scrollTop();
@@ -182,20 +266,45 @@ jQuery(document).ready(function($){
     }
   });
 
+  // Slider Servicios
+  $('.slider-servicios').slick({
+    dots: false,
+    infinite: false,
+    fade: true,
+    autoplay: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    prevArrow: $('#prevslideHomeMain'),
+    nextArrow: $('#nextslideHomeMain'),
+  });
+  slickCustomNav('.slider-servicios', '.boxThumbServicios');
+
   //BackToTop
   var btn = $('#button');
-
-  // $(window).scroll(function() {
-  //   if ($(window).scrollTop() > 300) {
-  //     btn.addClass('show');
-  //   } else {
-  //     btn.removeClass('show');
-  //   }
-  // });
 
   btn.on('click', function(e) {
     e.preventDefault();
     $('html, body').animate({scrollTop:0}, '300');
+  });
+
+  // ScrollY
+  $('.scrolly').scrolly({
+    offset: function () {
+      return $('#headerGeneral').height() - 2;
+    }
+  });
+
+  // Footer funciones
+  $("body").css("margin-bottom", $("footer").css("height"));
+  $(window).on('resize scroll', function () {
+    $("body").css("margin-bottom", $("footer").css("height"));
+    if ($("[data-last]").isInViewport()) {
+      $("footer").show();
+    } else {
+      $("footer").hide();
+    }
   });
   
 });

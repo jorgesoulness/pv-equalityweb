@@ -11,6 +11,7 @@
 
 .brand {
   border: 0; display: inline-block; font-size: 0; height: inherit; line-height: inherit; padding: 0 14px;
+  opacity: 1; @include transition(opacity 2.5s ease 0.75s); @include animation(none);
   & img {
     display: block; width: 100%; max-width: 114px; height: auto; margin: 0 auto 0 0; padding: 0;
   }
@@ -23,10 +24,14 @@
       max-width: 125px;
     }
   }
+  body.is-preload & {
+    opacity: 0;
+  }
 }
 
 .btnNav {
   @include display(flex); @include justify-content(flex-end); @include flex-grow(1); height: inherit; line-height: inherit;
+  opacity: 1; @include transition(opacity 2.5s ease 0.75s); @include animation(none);
 	a {
 		border: 0; display: block; font-size: rem(18px); height: inherit; line-height: 32px; padding: 0 10px; position: relative; vertical-align: middle; font-family: $hmedium; text-transform: uppercase;
 		&:last-child {
@@ -96,6 +101,9 @@
         padding-right: 4em !important;
 			}
 		}
+  }
+  body.is-preload & {
+    opacity: 0;
   }
 }
 

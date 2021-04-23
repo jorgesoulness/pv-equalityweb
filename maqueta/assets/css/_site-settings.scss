@@ -117,6 +117,22 @@ $c11: $gray-11;
     opacity: 1; @include transform(translate(-50%, -50%));
   }
 }
+@include keyframes(sdb10) {
+  0% {
+    @include transform(translate(0, 0));
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    @include transform(translate(0, 20px));
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 @function str-replace($string, $search, $replace: '') {
     $index: str-index($string, $search); 

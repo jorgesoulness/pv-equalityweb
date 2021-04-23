@@ -43,7 +43,6 @@
         </footer><!-- end.Footer -->
         
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/nprogress.js"></script>
-        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/jquery-ui.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/vendor/popper.js/dist/umd/popper.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/vendor/jquery.easing.1.3.js"></script>
@@ -52,8 +51,12 @@
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/additional-methods.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/wow.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/slick.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/jquery.scrolly.min.js"></script>
+			  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/jquery.scrollex.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/browser.min.js"></script>
+			  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/plugins/breakpoints.min.js"></script>
+        <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/scripts/parallaxscript.min.js?ver=<?php echo rand(); ?>"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/scripts/layoutScripts.js?ver=<?php echo rand(); ?>"></script>
-        <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/scripts/mainscript.min.js?ver=<?php echo rand(); ?>"></script> -->
 
         <script>
           $('body').show();
@@ -62,6 +65,7 @@
           setTimeout(function() {
             NProgress.done();
             $('.fadeX').addClass('out');
+            $('body').removeClass('is-preload');
           }, 1000);
 
           <?php if($_GET['sec'] == ''): ?>

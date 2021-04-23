@@ -4,7 +4,7 @@
 
 // Botones efecto
 .btnFx {
-  height: 42px; display: inline-flex; position: relative; overflow: hidden; font-size: rem(16px); text-decoration: none; border-radius: 0; -webkit-border-radius: 0; text-transform: uppercase; @include box-sizing(border-box); box-shadow: 0 3px 5px rgba($black, 0.20); text-align: center; line-height: 42px; padding: 0 30px; margin: 0 0 10px; @include transition(all 300ms); border: none; cursor: pointer; font-weight: 300;
+  height: 42px; display: inline-block; position: relative; overflow: hidden; font-size: rem(16px); text-decoration: none; border-radius: 0; -webkit-border-radius: 0; text-transform: uppercase; @include box-sizing(border-box); box-shadow: 0 3px 5px rgba($black, 0.20); text-align: center; line-height: 42px; padding: 0 30px; margin: 0 0 10px; @include transition(all 300ms); border: none; cursor: pointer; font-weight: 300;
   &__generic {
     width: auto; letter-spacing : 0.5px; word-wrap: break-word; color: $white;
     span {
@@ -73,31 +73,51 @@
 }
 
 .btnSlideProd {
-  width: 30px; height: 30px; @include position(absolute, 0 null null null); background-color: transparent; line-height: 28px; border: none; outline: 0; display: block; text-align: center; z-index: 10; font-size: rem(24px); padding: 0; margin: 0; cursor: pointer; color: $col3; border: 1px solid $col3; @include border-top-radius(50%); @include border-bottom-radius(50%); @include transition(all 0.23s);
+  width: 32px; height: 64px; @include position(absolute, 50% null null null); background-color: transparent; line-height: 64px; border: none; outline: 0; display: none; text-align: center; z-index: 10; font-size: rem(42px); padding: 0; margin: 0; cursor: pointer; color: $col1; @include transition(all 0.23s); border-radius: 0; @include transition(opacity 0.45s ease-in-out);
   &:before, &:after {
-    font-family: 'fontAwesome';
+    font-family: 'LineIcons';
   }
   &:hover {
-    color: $col1; border: 1px solid $col3; background-color: $col3;
+    color: $col2; border: none; background-color: transparent;
   }
   &.bLeftP {
-    right: calc(50% + 20px); @include transform(translateX(50%));
+    left: 20px; @include transform(translateY(-50%));
     &:before {
-      content: '\f104';
+      content: '\ea5a';
     }
   }
   &.nRightP {
-    right: calc(50% - 20px); @include transform(translateX(50%));
+    right: 20px; @include transform(translateY(-50%));
     &:after {
-      content: '\f105';
+      content: '\ea5c';
+    }
+  }
+  &.slick-disabled {
+    opacity: 0.45; cursor: none; pointer-events: none;
+  }
+  @media all and (min-width: 640px) {
+    display: block;
+    &.bLeftP {
+      left: 10px;
+    }
+    &.nRightP {
+      right: 10px;
     }
   }
   @media all and (min-width: 768px) {
     &.bLeftP {
-      right: 35px; @include transform(translateX(0));
+      left: 5px;
     }
     &.nRightP {
-      right: 0; @include transform(translateX(0));
+      right: 5px;
+    }
+  }
+  @media all and (min-width: 1280px) {
+    &.bLeftP {
+      left: 20px;
+    }
+    &.nRightP {
+      right: 20px;
     }
   }
 }

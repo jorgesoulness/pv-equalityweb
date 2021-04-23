@@ -25,7 +25,6 @@ require_once('functions.php');
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(''); ?>assets/css/vendor/animate.css">
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(''); ?>assets/css/vendor/hover-min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(''); ?>assets/css/nprogress.css">
-        <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(''); ?>assets/css/vendor/jquery-ui.css">
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/vendor/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>assets/js/vendor/modernizr-2.8.3.min.js"></script>
         
@@ -36,7 +35,7 @@ require_once('functions.php');
         <script>var siteURL = '<?php echo get_site_url(); ?>';</script>
 
     </head>
-    <body class="<?php echo classPage(); ?>" style="display: none;">
+    <body class="<?php echo classPage(); ?> is-preload" style="display: none;">
 
       <div class="overProgress fadeX"></div>
       
@@ -78,7 +77,7 @@ require_once('functions.php');
               </li>
             </ul>
             <ul class="actions stacked">
-              <li><a href="#" class="button primary fit">Contacto</a></li>
+              <a class="btnFx btnFx__generic btnFx__generic--orange" href="#"><span>Contacto</span></a>
             </ul>
           </div>
           <a class="close" href="#menu">Close</a>
