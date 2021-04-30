@@ -78,6 +78,7 @@ $table_prefix = 'equ2021_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
+define( 'ALLOW_UNFILTERED_UPLOADS', true );
 
 /* That's all, stop editing! Happy publishing. */
 
