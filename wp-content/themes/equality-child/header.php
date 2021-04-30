@@ -52,11 +52,24 @@
       </div>
       <nav class="btnNav">
         <div class="langContent">
+          <?php if (function_exists('pll_register_string')) :
+            $translationsTwo = pll_the_languages( array( 'raw' => 1, 'show_flags' => 1, 'hide_if_empty'=>'0' ) );
+            $arra = array('ES', 'EN', 'PT');
+            $ii = 0;
+          ?>
           <ul class="listLang">
-            <li class="listLang__item listLang__item--activo"><a href="">ES</a></li>
-            <li class="listLang__item"><a href="">EN</a></li>
-            <li class="listLang__item"><a href="">PR</a></li>
+          <?php foreach($translationsTwo as $keys => $values):
+            $transle = $values['no_translation'];
+            $current = $values['current_lang'];
+          ?>
+          <?php if($transle != true) : ?>
+            <li class="listLang__item listLang__item<?php if($current == 1) { echo '--activo'; } ?>"><a href="<?php echo $values['url']; ?>"><?php echo $arra[$ii]; ?></a></li>
+          <?php endif; ?>
+          <?php $ii++; endforeach; ?>
           </ul>
+          <?php
+            endif;
+          ?>
         </div>
         <a href="#menu" data-menu-expand="#menu"><?php _e('Menú', 'equality-child'); ?></a>
       </nav>
@@ -65,20 +78,6 @@
     <!-- Menu -->
     <nav id="menu">
       <div class="inner">
-        <!-- <ul class="links">
-          <li class="item-menu"><a href="index.html">Inicio</a></li>
-          <li class="item-menu"><a href="quienes-somos.html">Equality</a></li>
-          <li class="item-menu item-menu-dropdown">
-            <a href="#">Soluciones</a>
-            <div class="dropdownMenu">
-              <ul class="dropList">
-                <li class="dropList__item"><a href="quienes-somos.html">Servicio uno</a></li>
-                <li class="dropList__item"><a href="quienes-somos.html">Servicio uno</a></li>
-                <li class="dropList__item"><a href="quienes-somos.html">Servicio uno</a></li>
-              </ul>
-            </div>
-          </li>
-        </ul> -->
 <?php
       wp_nav_menu( array(
         'items_wrap'     => '<ul class="links">%3$s</ul>',
