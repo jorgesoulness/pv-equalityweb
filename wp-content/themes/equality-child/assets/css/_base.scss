@@ -6,7 +6,7 @@ html {
 }
 body {
   background-color: $white;
-  font-family: $roboto;
+  font-family: $hmedium;
   color: $col12;
   @include fluid-type(13px, 16px, 320px, 1200px);
   font-weight: 400;
@@ -18,21 +18,22 @@ body {
 *:focus {outline:none !important}
 
 a {
-  color: $col1; font-weight: 400;
+  color: $col1;
   &:hover {
     @include transition(all 0.25s); text-decoration: none; color: $col2;
   }
 }
 
 p {
-  font-weight: 400;
+  font-family: $hmedium;
   strong, b {
-    font-weight: 500;
+    font-family: $hmedium;
   }
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+  // font-weight: 700; font-family: $hbold;
+  font-family: $hbold;
 }
 h1 { @include fluid-type(18px, 40px, 320px, 1200px); }
 h2 { @include fluid-type(17px, 34px, 320px, 1200px); }

@@ -31,7 +31,7 @@
               <div class="col-12">
                 <div class="g-footer__desc g-footer__desc--down">
                   <div class="copyFooter">
-                    <p><?php _e('Todos los Derechos Reservados', 'equality-child'); ?> | &copy; Equality <?php echo wp_date('Y') ?> | <a href="<?php echo esc_url(site_url('')); ?>/aviso-de-privacidad"><?php _e('Aviso de Privacidad', 'equality-child'); ?></a>
+                    <p><?php _e('Todos los Derechos Reservados', 'equality-child'); ?> | &copy; Equality <?php echo wp_date('Y') ?> | <a href="<?php echo esc_url(site_url('')); ?>/<?php $currentLanguage  = get_bloginfo('language'); if($currentLanguage == "en-US") : ?>en/privacy-policy<?php elseif($currentLanguage == "pt-PT") : ?>pt/aviso-de-privacidade<?php else: ?>aviso-de-privacidad<?php endif; ?>"><?php _e('Aviso de Privacidad', 'equality-child'); ?></a>
                     </p>
                   </div>
               <?php if( have_rows('footer', 'option') ): ?>

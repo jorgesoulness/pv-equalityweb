@@ -95,52 +95,57 @@
               <div class="col-12 col-md-8 col-lg-6">
 
                 <div class="formContacto">
-                  <form action="" name="serviciosfrm" id="serviciosfrm" method="POST">
                     <div class="form-row">
 
                       <div class="col-12">
                         <div class="descForm">
                           <p><?php _e('DEJANOS TUS DATOS EN EL SIGUIENTE FORMULARIO Y PRONTO TE CONTACTAREMOS.', 'equality-child'); ?></p>
                         </div>
-                      </div><!-- end.col-* -->
+                      </div>
+                      <!-- <div class="col-12">
+                        <div class="animatedField form-group">
+                          <input name="nombre" type="text" class="form-control" id="nombre" required />
+                          <label for="nombre"><?php _e('Nombre completo', 'equality-child'); ?></label>
+                        </div>
+                      </div>
                       <div class="col-12">
                         <div class="animatedField form-group">
-                          <input name="nombreServFrm" type="text" class="form-control" id="nombreServFrm" required />
-                          <label for="nombreServFrm"><?php _e('Nombre completo', 'equality-child'); ?></label>
+                          <input name="email" type="email" class="form-control" id="email" required />
+                          <label for="email"><?php _e('Correo electrónico', 'equality-child'); ?></label>
                         </div>
-                      </div><!-- end.col-* -->
+                      </div>
                       <div class="col-12">
                         <div class="animatedField form-group">
-                          <input name="emailServFrm" type="email" class="form-control" id="emailServFrm" required />
-                          <label for="emailServFrm"><?php _e('Correo electrónico', 'equality-child'); ?></label>
+                          <input name="telefono" type="text" class="form-control" id="telefono" required />
+                          <label for="telefono"><?php _e('Teléfono', 'equality-child'); ?></label>
                         </div>
-                      </div><!-- end.col-* -->
-                      <div class="col-12">
-                        <div class="animatedField form-group">
-                          <input name="telServFrm" type="text" class="form-control" id="telServFrm" required />
-                          <label for="telServFrm"><?php _e('Teléfono', 'equality-child'); ?></label>
-                        </div>
-                      </div><!-- end.col-* -->
+                      </div>
                       <div class="col-12">
                         <div class="animatedTextArea form-group">
-                          <textarea name="mensajeServFrm" id="mensajeServFrm" cols="30" rows="5" required></textarea>
-                          <label for="mensajeServFrm"><?php _e('Mensaje', 'equality-child'); ?></label>
+                          <textarea name="mensaje" id="mensaje" cols="30" rows="5" required></textarea>
+                          <label for="mensaje"><?php _e('Mensaje', 'equality-child'); ?></label>
                         </div>
                       </div>
                       <div class="col-12">
                         <fieldset>
-                          <input type="checkbox" class="CheckStyle" name="acceptServFrm" id="acceptServFrm" vlaue="Acepto">
-                          <label for="acceptServFrm"><?php _e('He leído y acepto el', 'equality-child'); ?> <a href="<?php esc_url(site_url('')); ?>/aviso-de-privacidad"><?php _e('Aviso de Privacidad', 'equality-child'); ?></a></label>
+                          <input type="checkbox" class="CheckStyle" name="acepto" id="acepto" vlaue="Acepto">
+                          <label for="acepto"><?php _e('He leído y acepto el', 'equality-child'); ?> <a href="<?php esc_url(site_url('')); ?>/aviso-de-privacidad"><?php _e('Aviso de Privacidad', 'equality-child'); ?></a></label>
                         </fieldset>
-												<input type="hidden" name="nombreSec" id="nombreSec" value="<?php the_title(); ?>">
+												<input type="hidden" name="lead" id="lead" value="<?php the_title(); ?>">
                       </div>
                       <div class="col-12 text-center">
                         <input id="submit" name="submit" class="btnGen btnGen__item btnGen__item--purple" type="submit"
                           value="<?php _e('Enviar', 'equality-child'); ?>">
+                      </div> -->
+                      <div class="col-12">
+                      <?php
+                        if ( get_field('campo_formulario') ) {
+                          echo do_shortcode( get_field('campo_formulario') );
+                        }
+                      ?>
                       </div>
 
                     </div><!-- end.col-* -->
-                  </form><!-- end.form -->
                 </div><!-- end.formContacto -->
 
               </div><!-- end.col-* -->
@@ -191,7 +196,4 @@
 		) );
 	?>
 <?php endif; ?>
-	<div class="entry-footer">
-		<?php equality_entry_footer(); ?>
-	</div><!-- .entry-footer -->
 

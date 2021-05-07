@@ -30,7 +30,7 @@
 							border-top: 0 !important;
 						}
 					}
-					&.menu-item-dropdown {
+					&.menu-item-has-children {
 						& > a {
 							position: relative;
 							&:after {
@@ -77,7 +77,7 @@
 	}
 
 	// Sub menu
-	.dropList {
+	.dropList, .sub-menu {
 		width: 100%; height: auto; padding: 0 10px; margin: 0!important; list-style-type: none; @include displayFlex(flex, column, center, center, wrap); @include box-sizing(border-box);
 		&__item {
 			list-style-type: none; padding: 0; margin: 0; width: 100%;

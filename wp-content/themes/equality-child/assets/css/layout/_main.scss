@@ -45,7 +45,7 @@ article {
 
 // Sections
 .hero-sec {
-  width: 100%; height: 400px; @include position(relative, null null null null); padding: 0; margin: 0; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;
+  width: 100%; height: 400px; @include position(relative, null null null null); padding: 0; margin: 0; background-attachment: local; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;
   & .contHero {
     z-index: 4; @include position(absolute, 50% null null 0); @include transform(translate(0, -50%)); width: 100%; height: auto; padding: 0; margin: 0; @include box-sizing(border-box);
     opacity: 1; @include transition(opacity 1.5s ease 0.55s, transform 0.5s ease-out 0.45s, filter 0.5s ease 0.45s);
@@ -56,9 +56,9 @@ article {
       color: $white; @include fluid-type(23px, 40px, 320px, 1200px); margin: 0; padding: 0; text-align: left;
     }
     & .desc-hero {
-      width: 100%; height: auto; padding: 0; margin: 0 auto 20px 0; position: relative; @include box-sizing(border-box); color: $white; text-align: left; font-weight: 300; @include fluid-type(13px, 20px, 320px, 1200px); text-transform: uppercase;
+      width: 100%; height: auto; padding: 0; margin: 0 auto 20px 0; position: relative; @include box-sizing(border-box); color: $white; text-align: left; font-family: $hlight; @include fluid-type(13px, 20px, 320px, 1200px); text-transform: uppercase;
       & p {
-        color: $white; margin: 0; padding: 0; font-weight: 300;
+        color: $white; margin: 0; padding: 0; font-family: $hlight;
       }
     }
     & .btn-hero {
@@ -91,6 +91,9 @@ article {
       bottom: 60px;
     }
   }
+  @media all and (min-width: 981px) {
+    background-attachment: fixed;
+  }
   @media all and (min-width: 1024px) {
     height: 500px;
     & .contHero {
@@ -111,7 +114,7 @@ article {
 
 // Utilidades
 .bannerInt {
-  width: 100%; height: 300px; @include position(relative, null null null null); padding: 0; margin: 0; background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;
+  width: 100%; height: 300px; @include position(relative, null null null null); padding: 0; margin: 0; background-attachment: local; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;
   & hr {
     border-top: 1.5px solid $white;
   }
@@ -138,6 +141,9 @@ article {
         width: 70%;
       }
     }
+  }
+  @media all and (min-width: 981px) {
+    background-attachment: fixed;
   }
   @media all and (min-width: 1024px) {
     height: 410px;
@@ -296,7 +302,7 @@ article {
 }
 
 .contNewsletter {
-  width: 100%; height: auto; @include position(relative, null null null null); padding: 40px 0; margin: 0; @include box-sizing(border-box); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;
+  width: 100%; height: auto; @include position(relative, null null null null); padding: 40px 0; margin: 0; @include box-sizing(border-box); background-attachment: local; background-position: center; background-repeat: no-repeat; background-size: cover; overflow: hidden;
   &__desc {
     width: 100%; height: auto; padding: 0; margin: 0; position: relative; @include box-sizing(border-box);
     & .newsTestDesc {
@@ -338,6 +344,9 @@ article {
   @media all and (min-width: 768px) {
     padding: 80px 0;
   }
+  @media all and (min-width: 981px) {
+    background-attachment: fixed;
+  }
   @media all and (min-width: 1024px) {
     padding: 100px 0;
   }
@@ -362,7 +371,7 @@ article {
     & ul, & ol {
       list-style-type: none; padding: 0 0 0 24px; margin: 0 0 20px; @include box-sizing(border-box);
       & li {
-        list-style-type: none; position: relative; margin: 0 0 3px;
+        list-style-type: none; position: relative; margin: 0 0 3px; font-family: $hlight;
         &:before {
           content: ''; @include position(absolute, 8px null null -15px); width: 6px; height: 6px; background-color: $col5; border-radius: 50%;
         }
@@ -404,22 +413,22 @@ article {
       color: $white;
     }
     & p {
-      font-weight: 300;
+      font-family: $hlight;
       & a {
-        font-weight: 500;
+        font-family: $hmedium;
       }
     }
     & ul, & ol {
       list-style-type: none; padding: 0 0 0 24px; margin: 0 0 20px; @include box-sizing(border-box);
       & li {
-        list-style-type: none; position: relative; margin: 0 0 3px; font-weight: 300;
+        list-style-type: none; position: relative; margin: 0 0 3px; font-family: $hlight;
         &:before {
           content: ''; @include position(absolute, 8px null null -15px); width: 6px; height: 6px; background-color: $white; border-radius: 50%;
         }
       }
     }
     & strong, & b {
-      font-weight: 700;
+      font-family: $hmedium;
     }
   }
   & .btnRte {

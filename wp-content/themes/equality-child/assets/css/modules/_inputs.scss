@@ -120,7 +120,7 @@
     h1, h2, h3, h4, h5, h6 {
       text-align: left; margin-bottom: 10px;
     }
-    p { text-align: center; margin: 0; padding: 0; @include fluid-type(14px, 20px, 320px, 1200px); font-weight: 300; }
+    p { text-align: center; margin: 0; padding: 0; @include fluid-type(14px, 20px, 320px, 1200px); font-family: $hlight; }
     @media all and (min-width: 768px) {
       margin: 0 0 30px 0;
     }

@@ -170,6 +170,7 @@ global $post;
                           </div><!-- end.animatedField -->
                         </div><!-- end.boxRowNews__input--left -->
                         <div class="boxRowNews__input boxRowNews__input--right">
+                          <input type="hidden" name="fuente_de_lead" id="fuente_de_lead" value="Boletin Equality">
                           <input type="submit" class="btnGen btnGen__item btnGen__item--purple" value="<?php _e('Suscríbete', 'equality-child'); ?>">
                         </div><!-- end.boxRowNews__input--right -->
 

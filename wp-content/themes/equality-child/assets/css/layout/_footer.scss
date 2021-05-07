@@ -89,9 +89,9 @@
 .copyFooter {
   width: 100%; height: auto; padding: 0 0; margin: 0 0 15px;
   p {
-    color: $c11; text-align: center; margin: 0; @include fluid-type(13px, 14px, 320px, 768px); font-weight: 300;
+    color: $c11; text-align: center; margin: 0; @include fluid-type(13px, 14px, 320px, 768px); font-family: $hlight;
     a {
-      color: $c11; font-weight: 500;
+      color: $c11; font-family: $hmedium;
       &:hover {
         color: $white;
       }

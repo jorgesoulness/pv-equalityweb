@@ -5,9 +5,9 @@
   &__icono {
     width: 100%; height: 100%; padding: 0; margin: 0; @include position(absolute, 0 null null 0); @include displayFlex(flex, column, center, center, wrap); @include transform(translateY(0)); @include transition(transform 300ms ease-in-out 0.25s, opacity 250ms ease-in-out 0.15s); opacity: 1;
     &--circle {
-      width: 45px; height: 45px; margin: 0; padding: 0; border: 1px solid $col9; @include box-sizing(border-box); border-radius: 50%; overflow: hidden; position: relative;
+      width: 53px; height: 53px; margin: 0; padding: 0; border: 1px solid $col9; @include box-sizing(border-box); border-radius: 50%; overflow: hidden; position: relative;
       & img {
-        width: 30px; height: auto; padding: 0; margin: 0; display: block; @include position(absolute, 50% null null 50%); border: none; @include transform(translate(-50%, -50%));
+        width: 35px; height: auto; padding: 0; margin: 0; display: block; @include position(absolute, 50% null null 50%); border: none; @include transform(translate(-50%, -50%));
       }
     }
   }
@@ -29,6 +29,12 @@
     border-bottom: 0.5px solid $col8; height: 120px; 
     &__icono {
       @include transition(transform 300ms ease-in-out 0.25s, opacity 250ms ease-in-out 0.15s); opacity: 1;
+      &--circle {
+        width: 80px; height: 80px;
+        & img {
+          width: 50px;
+        }
+      }
     }
     &__titulo {
       width: 100%; height: 100%; padding: 0; margin: 0; @include position(absolute, 0 null null 0); @include displayFlex(flex, column, center, center, wrap); @include transform(translateY(100%)); opacity: 0; @include transition(transform 300ms ease-in-out 0.30s, opacity 300ms ease-in-out 0.20s);

@@ -1,0 +1,197 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Equality Child\n"
+"POT-Creation-Date: 2021-05-04 20:18-0500\n"
+"PO-Revision-Date: 2021-05-04 22:06-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:23
+msgid "Oops! No se encontró la página"
+msgstr "Oops! Page not found"
+
+#: 404.php:28
+msgid ""
+"Parece que lo que estás buscando no se encuentra aquí. Intenta con otra "
+"dirección."
+msgstr ""
+"It seems that what you are looking for is not found here. Please try another "
+"address."
+
+#: 404.php:31
+msgid "Regresar al inicio"
+msgstr "Return to home"
+
+#: footer.php:12
+msgid "Regresar"
+msgstr "Back to top"
+
+#: footer.php:34
+msgid "Todos los Derechos Reservados"
+msgstr "All Rigthts Reserved"
+
+#: footer.php:34 template-parts/content-page.php:169
+#: template-parts/content.php:133
+msgid "Aviso de Privacidad"
+msgstr "Privacy Policy"
+
+#: functions.php:38
+msgid "Menu Principal"
+msgstr "MAin Menu"
+
+#: functions.php:39
+msgid "Menu Footer"
+msgstr "Footer Menu"
+
+#: header.php:74
+msgid "Menú"
+msgstr "Menu"
+
+#: header.php:93
+msgid "Contacto"
+msgstr "Contact"
+
+#: header.php:96
+msgid "Cerrar"
+msgstr "Close"
+
+#: page-templates/inicio-page.php:85
+msgid "Soluciones"
+msgstr "Solutions"
+
+#: page-templates/inicio-page.php:121 template-parts/content.php:170
+msgid "Más información"
+msgstr "More infromation"
+
+#: page-templates/inicio-page.php:122 template-parts/content.php:67
+#: template-parts/content.php:75
+msgid "Solicita una demo"
+msgstr "Request a demo"
+
+#: page-templates/inicio-page.php:169 template-parts/content-page.php:145
+#: template-parts/content.php:115
+msgid "Correo electrónico"
+msgstr "Email"
+
+#: page-templates/inicio-page.php:173
+msgid "Suscríbete"
+msgstr "Suscribe"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#. translators: 1: link to WP admin new post page.
+#: template-parts/content-none.php:23
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:36
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: template-parts/content-none.php:42
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:87 template-parts/content-page.php:210
+msgid "Lo sentimos"
+msgstr "We're sorry"
+
+#: template-parts/content-page.php:90
+msgid "No se encontraron datos en Quienes Somos"
+msgstr "No data was found in Who We Are"
+
+#: template-parts/content-page.php:139 template-parts/content.php:109
+msgid "Nombre completo"
+msgstr "Name full"
+
+#: template-parts/content-page.php:151 template-parts/content.php:121
+msgid "Teléfono"
+msgstr "Phone"
+
+#: template-parts/content-page.php:157
+msgid "Empresa"
+msgstr "Business"
+
+#: template-parts/content-page.php:163 template-parts/content.php:127
+msgid "Mensaje"
+msgstr "Message"
+
+#: template-parts/content-page.php:169 template-parts/content.php:133
+msgid "He leído y acepto el"
+msgstr "I have read and accept the"
+
+#: template-parts/content-page.php:173 template-parts/content.php:139
+msgid "Enviar"
+msgstr "Send"
+
+#: template-parts/content-page.php:211
+msgid "No se encontraron datos en Listado Contacto"
+msgstr "No data found in Contact List"
+
+#: template-parts/content-page.php:238
+msgid "Páginas:"
+msgstr "Pages:"
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content-page.php:256
+#, php-format
+msgid "Editar <span class=\"screen-reader-text\">%s</span>"
+msgstr "Edit <span class=\"screen-reader-text\">%s</span>"
+
+#: template-parts/content.php:56
+msgid "Beneficios"
+msgstr "Benefits"
+
+#: template-parts/content.php:59
+msgid "Características"
+msgstr "Features"
+
+#: template-parts/content.php:92
+msgid "MÁS INFORMACIÓN"
+msgstr "MORE INFROMATION"
+
+#: template-parts/content.php:103
+msgid "DEJANOS TUS DATOS EN EL SIGUIENTE FORMULARIO Y PRONTO TE CONTACTAREMOS."
+msgstr ""
+"LEAVE US YOUR INFORMATION IN THE FOLLOWING FORM AND WE WILL CONTACT YOU SOON."
+
+#. translators: %s: Name of current post. Only visible to screen readers
+#: template-parts/content.php:183
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Equality Child"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Tema hijo"
+msgstr "Theme child"
+
+#. Author of the plugin/theme
+msgid "Jorge Malagón"
+msgstr ""
