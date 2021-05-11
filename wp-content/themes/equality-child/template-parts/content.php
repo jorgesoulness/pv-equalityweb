@@ -173,6 +173,7 @@
                 </div><!-- end.descAboutBox -->
 								<div class="btnArchive">
 									<a class="btnFx btnFx__generic btnFx__generic--orange" href="<?php the_permalink(); ?>"><span><?php _e('Más información', 'equality-child'); ?></span></a>
+									<a class="btnFx btnFx__generic btnFx__generic--purple" href="<?php the_permalink(); ?>#informacion"><span><?php _e('Solicita una demo', 'equality-child'); ?></span></a>
 								</div>
               </div><!-- end.col-* -->
               <div class="col-12<?php if( $wp_query->current_post % 2 ) { echo ' order-12'; } ?>">

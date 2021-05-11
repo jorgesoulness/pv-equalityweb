@@ -365,6 +365,9 @@ article {
   width: 100%; height: auto; @include position(relative, null null null null); padding: 50px 0 40px; margin: 0; @include box-sizing(border-box); background-color: $white;
   & .rte {
     width: 100%; height: auto; padding: 0; margin: 20px 0 0; position: relative; @include box-sizing(border-box); color: $col12;
+    & p {
+      font-family: $hlight;
+    }
     & h1, & h2, & h3, & h4, & h5, & h6 {
       color: $col7;
     }
@@ -378,10 +381,10 @@ article {
       }
     }
     & a {
-      font-weight: 500;
+      font-family: $hmedium;
     }
     & strong, & b {
-      font-weight: 700;
+      font-family: $hmedium;
     }
     img.alignright {float:right; margin:0 0 1em 1em}
     img.alignleft {float:left; margin:0 1em 1em 0}
@@ -503,15 +506,15 @@ article {
       color: $col12;
     }
     & p {
-      font-weight: 300; color: $col12;
+      font-family: $hlight; color: $col12;
       & a {
-        font-weight: 500;
+        font-family: $hmedium;
       }
     }
     & ul, & ol {
       list-style-type: none; padding: 0 0 0 24px; margin: 0 0 20px; @include box-sizing(border-box);
       & li {
-        list-style-type: none; position: relative; margin: 0 0 3px; font-weight: 600; color: $col1;
+        list-style-type: none; position: relative; margin: 0 0 3px; font-family: $hlight; color: $col1;
         &:before {
           content: ''; @include position(absolute, 8px null null -15px); width: 6px; height: 6px; background-color: $col5; border-radius: 50%;
         }

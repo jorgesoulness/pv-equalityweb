@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Equality Child\n"
 "POT-Creation-Date: 2021-05-04 20:18-0500\n"
-"PO-Revision-Date: 2021-05-04 22:06-0500\n"
+"PO-Revision-Date: 2021-05-10 19:59-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -43,7 +43,7 @@ msgstr "Back to top"
 
 #: footer.php:34
 msgid "Todos los Derechos Reservados"
-msgstr "All Rigthts Reserved"
+msgstr "All Rights Reserved"
 
 #: footer.php:34 template-parts/content-page.php:169
 #: template-parts/content.php:133
@@ -52,7 +52,7 @@ msgstr "Privacy Policy"
 
 #: functions.php:38
 msgid "Menu Principal"
-msgstr "MAin Menu"
+msgstr "Main Menu"
 
 #: functions.php:39
 msgid "Menu Footer"
@@ -76,7 +76,7 @@ msgstr "Solutions"
 
 #: page-templates/inicio-page.php:121 template-parts/content.php:170
 msgid "Más información"
-msgstr "More infromation"
+msgstr "More information"
 
 #: page-templates/inicio-page.php:122 template-parts/content.php:67
 #: template-parts/content.php:75
@@ -171,7 +171,7 @@ msgstr "Features"
 
 #: template-parts/content.php:92
 msgid "MÁS INFORMACIÓN"
-msgstr "MORE INFROMATION"
+msgstr "MORE INFORMATION"
 
 #: template-parts/content.php:103
 msgid "DEJANOS TUS DATOS EN EL SIGUIENTE FORMULARIO Y PRONTO TE CONTACTAREMOS."

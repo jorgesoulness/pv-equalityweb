@@ -157,22 +157,23 @@
                 </div><!-- end.col-* -->
                 <div class="col-12 col-md-10 col-lg-8">
                   <div class="contNewsletter__form">
-                    <form action="<?php echo esc_url(site_url('')); ?>" name="frmNewsletter" id="frmNewsletter" method="post">
+                    <!-- <form action="<?php echo esc_url(site_url('')); ?>" name="frmNewsletter" id="frmNewsletter" method="post"> -->
                       <div class="boxRowNews">
                       
-                        <div class="boxRowNews__input boxRowNews__input--left">
+                        <!-- <div class="boxRowNews__input boxRowNews__input--left">
                           <div class="animatedField">
                             <input name="email" type="email" class="form-control" id="email" required>
                             <label for="email"><?php _e('Correo electrónico', 'equality-child'); ?></label>
-                          </div><!-- end.animatedField -->
-                        </div><!-- end.boxRowNews__input--left -->
+                          </div>
+                        </div>
                         <div class="boxRowNews__input boxRowNews__input--right">
                           <input type="hidden" name="fuente_de_lead" id="fuente_de_lead" value="Newsletter Equality">
                           <input type="submit" class="btnGen btnGen__item btnGen__item--purple" value="<?php _e('Suscríbete', 'equality-child'); ?>">
-                        </div><!-- end.boxRowNews__input--right -->
+                        </div> -->
+                        <?php echo do_shortcode('[hubspot type=form portal=8252034 id=7104691b-fb02-487e-88a6-26716ca9e8c7]'); ?>
 
                       </div><!-- end.boxRowNews --> 
-                    </form><!-- end.formNews -->
+                    <!-- </form> -->
                   </div><!-- end.contNewsletter__form -->
                 </div><!-- end.col-* -->
               </div><!-- end.row -->
@@ -344,7 +345,14 @@ if( have_rows('content_quienes') ): ?>
 
                     </div>
                   </form> -->
+              <?php $currentLanguage  = get_bloginfo('language');
+                    if($currentLanguage == "en-US") : ?>
+                  <?php echo do_shortcode('[hubspot type=form portal=8252034 id=6f6478d8-94c7-4088-a10b-bc36a7372591]'); ?>
+              <?php elseif($currentLanguage == "pt-PT") : ?>
+                  <?php echo do_shortcode('[hubspot type=form portal=8252034 id=9ac7b5a6-35f8-49a9-9b72-dee572edf453]'); ?>
+              <?php else: ?>
                   <?php echo do_shortcode('[hubspot type=form portal=8252034 id=2d70b0c5-47f7-48ef-be3a-9de0abf233f1]'); ?>
+              <?php endif; ?>
                 </div><!-- end.formContacto -->
 
               </div><!-- end.col-* -->
@@ -390,7 +398,7 @@ if( have_rows('content_contacto') ): ?>
         </section><!-- end.contContact -->
 
 <?php // Pagina Soluciones
-  elseif(is_page(array(array(170, 182, 184)))): ?>
+  elseif(is_page(array(170, 182, 184))): ?>
         <section id="banner" data-parallax-fx class="bannerInt"
           style="background-image: url(<?php the_field('fondo_banner_hd'); ?>);" data-bg-func
           data-bg-hdesktop="<?php the_field('fondo_banner_hd'); ?>"
@@ -450,6 +458,7 @@ if( have_rows('content_contacto') ): ?>
                 </div><!-- end.descAboutBox -->
 								<div class="btnArchive">
 									<a class="btnFx btnFx__generic btnFx__generic--orange" href="<?php the_permalink(); ?>"><span><?php _e('Más información', 'equality-child'); ?></span></a>
+                  <a class="btnFx btnFx__generic btnFx__generic--purple" href="<?php the_permalink(); ?>#informacion"><span><?php _e('Solicita una demo', 'equality-child'); ?></span></a>
 								</div>
               </div><!-- end.col-* -->
               <div class="col-12<?php echo ($countsol%2 == 0) ? '' : ' order-12'; ?>">

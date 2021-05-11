@@ -137,10 +137,13 @@
     @include flex(0 0 100%); max-width: 100%; position: relative; width: 100%; min-height: 1px; @include box-sizing(border-box); margin: 0; padding: 0;
     @include transform(translateX(20%)); opacity: 0; @include filter(blur(20px));
     @include transition(opacity 1.5s ease 0.35s, transform 0.5s ease-out 0.25s, filter 0.5s ease 0.25s);
+    & p {
+      font-family: $hlight;
+    }
     ul, ol {
       list-style-type: none; padding: 0 0 0 24px; margin: 0 0 20px; @include box-sizing(border-box);
       & li {
-        list-style-type: none; position: relative; margin: 0 0 3px;
+        list-style-type: none; position: relative; margin: 0 0 3px; font-family: $hlight;
         &:before {
           content: ''; @include position(absolute, 50% null null -15px); width: 6px; height: 6px; background-color: $col5; border-radius: 50%; @include transform(translateY(-50%));
         }
@@ -212,7 +215,7 @@
 }
 
 .boxRowNews {
-  width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, column, flex-start, center, wrap);
+  width: 100%; height: auto; padding: 0; margin: 0; @include displayFlex(flex, column, center, center, wrap);
   &__input {
     &--left {
       @include flex(1 1 auto); margin: 0 0 10px; padding: 0; width: 100%;
@@ -254,7 +257,7 @@
       color: $col7; margin: 0 0 15px; padding: 0; text-transform: uppercase; @include fluid-type(13px, 16px, 320px, 1200px); font-weight: 500;
     }
     & p {
-      color: $col12; margin: 0; padding: 0; @include fluid-type(13px, 16px, 320px, 1200px); font-weight: 300;
+      color: $col12; margin: 0; padding: 0; @include fluid-type(13px, 16px, 320px, 1200px); font-family: $hlight;
     }
     & a {
       color: $col5; text-decoration: none;
