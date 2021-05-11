@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">       
 
         <!-- S T Y L E S - G E N E R A L -->
+        <meta name="theme-color" content="#712a81" />
         <?php wp_head(); ?>
         
         <!--[if lt IE 9]>
