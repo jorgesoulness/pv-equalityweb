@@ -5,9 +5,9 @@
   &__icono {
     width: 100%; height: 100%; padding: 0; margin: 0; @include position(absolute, 0 null null 0); @include displayFlex(flex, column, center, center, wrap); @include transform(translateY(0)); @include transition(transform 300ms ease-in-out 0.25s, opacity 250ms ease-in-out 0.15s); opacity: 1;
     &--circle {
-      width: 53px; height: 53px; margin: 0; padding: 0; border: 1px solid $col9; @include box-sizing(border-box); border-radius: 50%; overflow: hidden; position: relative;
+      width: 43px; height: 43px; margin: 0; padding: 0; border: 1px solid $col9; @include box-sizing(border-box); border-radius: 50%; overflow: hidden; position: relative;
       & img {
-        width: 35px; height: auto; padding: 0; margin: 0; display: block; @include position(absolute, 50% null null 50%); border: none; @include transform(translate(-50%, -50%));
+        width: 28px; height: auto; padding: 0; margin: 0; display: block; @include position(absolute, 50% null null 50%); border: none; @include transform(translate(-50%, -50%));
       }
     }
   }
@@ -96,6 +96,19 @@
     &[data-numbre-box="3"] {
       & .boxThumbServicios__icono {
         &--circle {
+          border: 1px solid $col13;
+        }
+      }
+      &:before {
+        background-color: $col13;
+      }
+      &:hover {
+        background-color: $col13; border-bottom: 0.5px solid $col13;
+      }
+    }
+    &[data-numbre-box="4"] {
+      & .boxThumbServicios__icono {
+        &--circle {
           border: 1px solid $col10;
         }
       }
@@ -106,19 +119,19 @@
         background-color: $col10; border-bottom: 0.5px solid $col10;
       }
     }
-    &[data-numbre-box="4"] {
+    &[data-numbre-box="5"] {
       & .boxThumbServicios__icono {
         &--circle {
-          border: 1px solid $col8;
+          border: 1px solid $col14;
         }
       }
       &:before {
-        background-color: $col8;
+        background-color: $col14;
       }
       &:hover {
-        background-color: $col8; border-bottom: 0.5px solid $col8;
+        background-color: $col14; border-bottom: 0.5px solid $col14;
       }
-    }    
+    }  
   }
 }
 

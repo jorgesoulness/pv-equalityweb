@@ -56,7 +56,7 @@
     'post_type'   => 'servicio',
     'post_status' => 'publish',
     'posts_per_page' => -1,
-    'order'       => 'ASC',
+    'order'       => 'DESC',
    );
    $in = 0;
    $slideThumbs = new WP_Query( $thumbs );
@@ -92,7 +92,7 @@
     'post_type'   => 'servicio',
     'post_status' => 'publish',
     'posts_per_page' => -1,
-    'order'       => 'ASC',
+    'order'       => 'DESC',
    );
    $i = 0;
    $sliderServ = new WP_Query( $slide );
@@ -432,7 +432,7 @@ if( have_rows('content_contacto') ): ?>
     'post_type'   => 'servicio',
     'post_status' => 'publish',
     'posts_per_page' => -1,
-    'order'       => 'ASC',
+    'order'       => 'DESC',
   );
   $isol = 0;
   $countsol = 1;

@@ -172,7 +172,7 @@ article {
     @include displayFlex(flex, row, center, center, wrap); padding: 0; position: relative; margin-left: -5px; margin-right: -5px;
   }
   &__colsList {
-    @include flex(0 0 20%); max-width: 20%; width: 100%; min-height: 1px; padding-right: 5px; padding-left: 5px;
+    @include flex(0 0 20%); max-width: 16.66666%; width: 100%; min-height: 1px; padding-right: 5px; padding-left: 5px;
     & .slick-current {
       & .boxThumbServicios__icono {
         @include transform(translateY(0));
@@ -229,6 +229,17 @@ article {
           }
         }
         &[data-numbre-box="3"] {
+          background-color: $col13; border-bottom: 0.5px solid $col13;
+          & .boxThumbServicios__icono {
+            &--circle {
+              border: 1px solid $col13;
+            }
+          }
+          &:before {
+            background-color: $col13;
+          }
+        }
+        &[data-numbre-box="4"] {
           background-color: $col10; border-bottom: 0.5px solid $col10;
           & .boxThumbServicios__icono {
             &--circle {
@@ -239,15 +250,15 @@ article {
             background-color: $col10;
           }
         }
-        &[data-numbre-box="4"] {
-          background-color: $col8; border-bottom: 0.5px solid $col8;
+        &[data-numbre-box="5"] {
+          background-color: $col14; border-bottom: 0.5px solid $col14;
           & .boxThumbServicios__icono {
             &--circle {
-              border: 1px solid $col8;
+              border: 1px solid $col14;
             }
           }
           &:before {
-            background-color: $col8;
+            background-color: $col14;
           }
         }
       }
