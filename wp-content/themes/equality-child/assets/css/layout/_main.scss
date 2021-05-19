@@ -135,7 +135,7 @@ article {
     @extend .overlayClassAbs; z-index: 1; background-color: rgba($col1, 0.15);
   }
   @media all and (min-width: 768px) {
-    height: 350px;
+    height: 345px;
     & .titleInt {
       & .desc-hero-int {
         width: 70%;
@@ -143,15 +143,19 @@ article {
     }
   }
   @media all and (min-width: 981px) {
-    background-attachment: fixed;
+    background-attachment: fixed; background-size: initial;
   }
   @media all and (min-width: 1024px) {
-    height: 410px;
+    // height: 410px;
+    height: 350px;
     & .titleInt {
       & .desc-hero-int {
         width: 50%;
       }
     }
+  }
+  @media all and (min-width: 1440px) {
+    background-size: cover; height: 410px;
   }
   body.is-preload & {
     > .titleInt {

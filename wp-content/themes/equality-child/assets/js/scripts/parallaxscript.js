@@ -51,7 +51,7 @@
 
 			on = function() {
 
-				$t.css('background-position', 'center 100%, center 100%, center 0px');
+				$t.css('background-position', 'center 0px');
 
 				$window
 					.on('scroll._parallax', function() {

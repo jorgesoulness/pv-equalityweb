@@ -109,7 +109,7 @@
 
 // Lang Equality
 .langContent {
-  width: auto; height: 32px; display: none; padding: 0 20px; margin: 0; background-color: $col4; border-radius: 16px;
+  width: auto; height: 32px; @include display(flex); @include flex-direction(column); @include align-items(center); @include flex-wrap(wrap); padding: 0 8px; margin: 0; background-color: $col4; border-radius: 16px;
   & .listLang {
     @include displayFlex(flex, row, center, center, wrap); list-style-type: none; padding: 0; margin: 0;
     &__item {
@@ -133,6 +133,6 @@
     }
   }
   @media all and (min-width: 556px) {
-    @include display(flex); @include flex-direction(column); @include align-items(center); @include flex-wrap(wrap);
+    padding: 0 20px;
   }
 }

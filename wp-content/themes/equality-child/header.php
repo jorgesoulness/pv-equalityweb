@@ -83,7 +83,7 @@
 ?>
       </div>
       <nav class="btnNav">
-        <!-- <div class="langContent">
+        <div class="langContent">
           <?php if (function_exists('pll_register_string')) :
             $translationsTwo = pll_the_languages( array( 'raw' => 1, 'show_flags' => 1, 'hide_if_empty'=>'0' ) );
             $arra = array('ES', 'EN', 'PT');
@@ -102,7 +102,7 @@
           <?php
             endif;
           ?>
-        </div> -->
+        </div>
         <a href="#menu" data-menu-expand="#menu"><?php _e('Menú', 'equality-child'); ?></a>
       </nav>
     </header><!-- end.header -->
